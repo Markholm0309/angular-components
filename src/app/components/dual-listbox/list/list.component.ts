@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Item } from 'src/app/models/item';
+import { ListBoxItem } from 'src/app/models/listbox-item';
 
 @Component({
   selector: 'app-list',
@@ -7,10 +7,10 @@ import { Item } from 'src/app/models/item';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent {
-  @Input() items: Item[];
-  @Output() handleToggle: EventEmitter<Item> = new EventEmitter<Item>();
+  @Input() items: ListBoxItem[];
+  @Output() handleToggle: EventEmitter<ListBoxItem> = new EventEmitter<ListBoxItem>();
 
-  handleEmit(item: Item) {
+  handleEmit(item: ListBoxItem) {
     this.handleToggle.emit(item);
   }
 }

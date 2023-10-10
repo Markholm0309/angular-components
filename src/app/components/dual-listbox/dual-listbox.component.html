@@ -1,0 +1,9 @@
+<div class="app">
+    <h3>Dual List Box</h3>
+    <div class="flex">
+        <app-list [items]="leftItems" (handleToggle)="handleToggle($event)"></app-list>
+        <app-actions (moveRight)="moveRight()" (moveLeft)="moveLeft()"></app-actions>
+        <app-list [items]="rightItems" (handleToggle)="handleToggle($event)"></app-list>
+    </div>
+</div>
+
