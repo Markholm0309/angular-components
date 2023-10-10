@@ -1,0 +1,4 @@
+<label>
+    <input type="checkbox" [checked]="item.isChecked" (change)="this.handleToggle.emit(item)">
+    {{item.value}}
+</label>

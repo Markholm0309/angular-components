@@ -1,0 +1,5 @@
+<div class="list flex">
+    <div *ngFor="let item of items">
+        <app-item [item]="item" (handleToggle)="handleEmit($event)"></app-item>
+    </div>
+</div>
